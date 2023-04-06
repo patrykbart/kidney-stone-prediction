@@ -1,0 +1,19 @@
+model:
+  input_dim: 5
+  hidden_dim: 128
+  num_hidden_layers: 3
+
+data:
+  train_path: ./data/train.csv
+  valid_path: ./data/kindey_stone_urine_analysis.csv
+  test_path: ./data/test.csv
+  test_predictions_path: ./data/submission.csv
+
+training:
+  learning_rate: 0.001
+  weight_decay: 0.01
+  batch_size: 10
+  num_workers: 4
+  num_epochs: 50
+  checkpoint_dir: ./ckpt
+  early_stopping_patience: 3
